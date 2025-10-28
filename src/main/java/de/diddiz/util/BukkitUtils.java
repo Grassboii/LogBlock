@@ -356,7 +356,7 @@ public class BukkitUtils {
     public static void giveTool(Player player, int type) {
         final Inventory inv = player.getInventory();
         if (inv.contains(type)) {
-            player.sendMessage(ChatColor.RED + "You have already a " + materialName(type));
+            player.sendMessage(ChatColor.RED + "You already have a " + materialName(type));
         } else {
             final int free = inv.firstEmpty();
             if (free >= 0) {
@@ -449,3 +449,4 @@ public class BukkitUtils {
         return (i == null) ? 0 : i;
     }
 }
+
